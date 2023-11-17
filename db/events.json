@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1",
+    "title": "Concerto Rock",
+    "description": "Un incredibile concerto rock con le migliori band locali.",
+    "date": "2023-12-05",
+    "maxSeats": 500
+  },
+  {
+    "id": "2",
+    "title": "Conferenza sulla Tecnologia",
+    "description": "Un evento imperdibile per gli appassionati di tecnologia e innovazione.",
+    "date": "2023-11-20",
+    "maxSeats": 200
+  },
+  {
+    "id": "3",
+    "title": "Maratona di Beneficenza",
+    "description": "Una maratona per raccogliere fondi per una buona causa.",
+    "date": "2024-01-10",
+    "maxSeats": 1000
+  },
+  {}
+]

@@ -1,10 +1,12 @@
 const express = require('express');
-
 const app = express();
-
 const dotenv = require("dotenv");
-
 dotenv.config();
+
+// import
+const _404error = require("./middlewares/error404");
+const _500error = require("./middlewares/error500");
+
 
 
 const eventsRoutes = require('./routers/eventsRoutes');
@@ -21,6 +23,14 @@ app.use(express.static("public"));
 
 // Definiamo le rotte degli eventi
 app.use('/events', eventsRoutes);
+
+// errori
+
+//  500
+app.use(_500error);
+
+//  404
+app.use(_404error);
 
 
 
