@@ -20,5 +20,25 @@
     "date": "2024-01-10",
     "maxSeats": 1000
   },
-  {}
+  {},
+  {},
+  {
+    "id": "Seminario sul Web Development",
+    "title": "Un seminario interattivo sullo sviluppo web moderno.",
+    "description": "2023-08-15",
+    "date": 100
+  },
+  {
+    "id": "94444400",
+    "title": "Seminario sul Web Development",
+    "description": "Un seminario interattivo sullo sviluppo web moderno.",
+    "date": "2023-08-15",
+    "maxSeats": 100
+  },
+  {
+    "title": "Seminario sul Web Development",
+    "description": "Un seminario interattivo sullo sviluppo web moderno.",
+    "date": "2023-08-15",
+    "maxSeats": 100
+  }
 ]

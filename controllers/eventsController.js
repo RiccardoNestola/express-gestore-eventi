@@ -40,18 +40,27 @@ function store (req, res)  {
     
     const { id, title, description, date, maxSeats } = req.body;
 
-    const newEvent = new Event(id, title, description, date, maxSeats);
 
-    const succes = Event.add(newEvent);
+    let errors = [];
 
-    if(succes) {
-        res.status(201).json({ message: 'Evento aggiunto con successo', event: newEvent });
-    } else {
-        res.json({ message: 'Evento non aggiunto'});
+    if (!title) errors.push("Titolo mancante");
+    if (!description) errors.push("Descrizione mancante");
+    if (!date) errors.push("Data mancante");
+    if (!maxSeats) errors.push("Numero di posti massimi mancante");
+    if (isNaN(maxSeats)) errors.push("Numero di posti massimi deve essere un numero");
+
+    if (errors.length > 0) {
+        return res.status(400).json({ errors });
     }
 
+    const newEvent = new Event(id, title, description, date, maxSeats);
+
+    Event.add(newEvent);
+
+    res.status(201).json({ message: 'Evento aggiunto con successo', event: newEvent });
     
 };
+
 
 
 
